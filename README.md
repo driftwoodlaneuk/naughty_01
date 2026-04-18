@@ -1,6 +1,6 @@
-# Simple GitHub Website
+# Simple GitHub Pages landing page
 
-This folder is ready to upload to a GitHub repository or use with GitHub Pages.
+This site displays a message and then zooms into the SVG image.
 
 ## Structure
 
@@ -9,13 +9,22 @@ This folder is ready to upload to a GitHub repository or use with GitHub Pages.
 - `js/main.js`
 - `img/middle-finger-svgrepo-com.svg`
 
-## Publish with GitHub Pages
+## Custom message via URL
 
-1. Create a new repository on GitHub.
-2. Upload all files and folders from this package.
-3. In the repository, go to **Settings** -> **Pages**.
-4. Under **Build and deployment**, choose **Deploy from a branch**.
-5. Select the `main` branch and `/ (root)` folder.
-6. Save.
+The heading can be changed with the `message` query parameter.
 
-After a minute or two, GitHub will provide your site URL.
+### Default
+
+If no parameter is provided, the page shows:
+
+`I love you lots, but`
+
+### Example
+
+`https://your-site.example/?message=I%20don't%20like%20you`
+
+You can also wrap the message in quotes if you want, for example:
+
+`https://your-site.example/?message='I%20don't%20like%20you'`
+
+The JavaScript removes matching leading and trailing single or double quotes automatically.
